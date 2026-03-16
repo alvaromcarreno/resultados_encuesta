@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultados — Acompañamiento en la Práctica Instrumental</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep-purple: #2D1B4E;
+  --purple-mid: #5B3D8F;
+  --purple-light: #8B6BBF;
+  --purple-wash: #F0EAF7;
+  --purple-wash2: #E4D9F2;
+  --gold: #D4A843;
+  --gold-light: #F2D98B;
+  --gold-dark: #B8892E;
+  --blue-deep: #1A2744;
+  --blue-mid: #2E4A7A;
+  --cream: #FDF8F0;
+  --cream-dark: #F5EDE0;
+  --text-dark: #1E1433;
+  --text-mid: #4A3D5C;
+  --text-light: #7A6E8A;
+  --green-badge: #2E7D5B;
+  --green-bg: #E8F5ED;
+  --yellow-badge: #9E7C1A;
+  --yellow-bg: #FFF8E1;
+  --red-badge: #A13232;
+  --red-bg: #FDECEC;
+  --bar-green: #4CAF7D;
+  --bar-yellow: #E8B84A;
+  --bar-red: #D46A6A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--text-dark);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--deep-purple) 0%, var(--purple-mid) 50%, var(--blue-mid) 100%);
+  padding: 64px 48px 56px;
+  border-radius: 0 0 32px 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  display: none;
+}
+
+.hero::after {
+  display: none;
+}
+
+.hero-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-brand-sub {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.6);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 em {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-date {
+  margin-top: 24px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  font-weight: 400;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* === INTRO === */
+.intro {
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--deep-purple);
+  margin-bottom: 12px;
+}
+
+.intro p {
+  font-size: 15px;
+  color: var(--text-mid);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* === OVERVIEW BAR === */
+.overview {
+  padding: 20px 0 32px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.overview-card {
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.overview-card.green { background: var(--green-bg); }
+.overview-card.yellow { background: var(--yellow-bg); }
+.overview-card.red { background: var(--red-bg); }
+
+.overview-card .oc-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.overview-card.green .oc-num { color: var(--green-badge); }
+.overview-card.yellow .oc-num { color: var(--yellow-badge); }
+.overview-card.red .oc-num { color: var(--red-badge); }
+
+.overview-card .oc-label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.overview-card.green .oc-label { color: #1B5E3F; }
+.overview-card.yellow .oc-label { color: #6D5610; }
+.overview-card.red .oc-label { color: #7A2222; }
+
+/* === SECTION HEADERS === */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 40px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--purple-wash2);
+}
+
+.section-header .sh-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-header.green .sh-icon { background: var(--green-bg); }
+.section-header.yellow .sh-icon { background: var(--yellow-bg); }
+.section-header.red .sh-icon { background: var(--red-bg); }
+
+.section-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.section-header.green h3 { color: var(--green-badge); }
+.section-header.yellow h3 { color: var(--yellow-badge); }
+.section-header.red h3 { color: var(--red-badge); }
+
+.section-header .sh-sub {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* === DOMAIN CARDS === */
+.domain-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(45,27,78,0.06);
+  transition: box-shadow 0.2s;
+}
+
+.domain-card:hover {
+  box-shadow: 0 4px 24px rgba(45,27,78,0.08);
+}
+
+.dc-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dc-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dc-icon.green { background: var(--green-bg); }
+.dc-icon.yellow { background: var(--yellow-bg); }
+.dc-icon.red { background: var(--red-bg); }
+
+.dc-icon svg { width: 26px; height: 26px; }
+
+.dc-info { flex: 1; min-width: 0; }
+
+.dc-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.dc-info .dc-sub {
+  font-size: 12px;
+  color: var(--text-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.dc-score {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.dc-score .score-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dc-score.green .score-num { color: var(--green-badge); }
+.dc-score.yellow .score-num { color: var(--yellow-badge); }
+.dc-score.red .score-num { color: var(--red-badge); }
+
+.dc-score .score-max {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* bar */
+.dc-bar {
+  height: 8px;
+  background: var(--cream-dark);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.dc-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.dc-bar-fill.green { background: linear-gradient(90deg, #4CAF7D, #6FCF97); }
+.dc-bar-fill.yellow { background: linear-gradient(90deg, #D4A843, #F2D98B); }
+.dc-bar-fill.red { background: linear-gradient(90deg, #D46A6A, #E89A9A); }
+
+.dc-text {
+  font-size: 14.5px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.dc-text strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* badge */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.badge.green { background: var(--green-bg); color: var(--green-badge); }
+.badge.yellow { background: var(--yellow-bg); color: var(--yellow-badge); }
+.badge.red { background: var(--red-bg); color: var(--red-badge); }
+
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  padding: 48px 0 40px;
+  border-top: 2px solid var(--purple-wash2);
+  margin-top: 48px;
+}
+
+.footer p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.footer .footer-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--purple-mid);
+}
+
+/* === NOTE BOX === */
+.note-box {
+  background: var(--purple-wash);
+  border-left: 4px solid var(--purple-mid);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 24px 0 32px;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.note-box strong {
+  color: var(--deep-purple);
+}
+
+/* === ANIMATION === */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.domain-card {
+  animation: fadeUp 0.5s ease both;
+}
+
+.domain-card:nth-child(1) { animation-delay: 0.05s; }
+.domain-card:nth-child(2) { animation-delay: 0.1s; }
+.domain-card:nth-child(3) { animation-delay: 0.15s; }
+.domain-card:nth-child(4) { animation-delay: 0.2s; }
+.domain-card:nth-child(5) { animation-delay: 0.25s; }
+.domain-card:nth-child(6) { animation-delay: 0.3s; }
+.domain-card:nth-child(7) { animation-delay: 0.35s; }
+.domain-card:nth-child(8) { animation-delay: 0.4s; }
+.domain-card:nth-child(9) { animation-delay: 0.45s; }
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .hero { padding: 40px 24px 36px; }
+  .hero h1 { font-size: 24px; }
+  .hero .meta { gap: 20px; }
+  .overview-grid { grid-template-columns: 1fr; }
+  .dc-top { flex-wrap: wrap; }
+  .dc-score { text-align: left; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-brand">Brown Music<span class="hero-brand-sub">, estudio de violín centrado en la familia</span></div>
+  <h1>Acompañar la práctica del <em>violín</em> en casa:<br>fortalezas y desafíos de las familias</h1>
+  <p>Resultados de la encuesta orientada a comprender la experiencia de madres y padres al apoyar el estudio cotidiano de sus hijos e hijas.</p>
+  <div class="hero-date">Marzo 2026</div>
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <h2>Lo que medimos y por qué importa</h2>
+  <p>Se exploraron 14 aspectos de la experiencia de las madres y padres que acompañan la práctica musical de sus hijos e hijas. Cada dominio se midió en una escala de 1 a 5. Los resultados se presentan organizados en tres grupos: las fortalezas del grupo, los aspectos en desarrollo y los desafíos donde se necesita mayor apoyo.</p>
+</div>
+
+<div class="note-box">
+  <strong>¿Cómo leer los puntajes?</strong> Cada dominio tiene un puntaje de 1 a 5. Un puntaje de <strong>4 o más</strong> indica una fortaleza clara; entre <strong>3 y 4</strong> es un aspecto en desarrollo; y por <strong>debajo de 3</strong> señala un desafío donde se necesita mayor apoyo. Las preguntas formuladas en sentido negativo fueron invertidas, de modo que un puntaje alto siempre significa una situación favorable.
+</div>
+
+<!-- OVERVIEW -->
+<div class="overview">
+  <div class="overview-grid">
+    <div class="overview-card green">
+      <div class="oc-num">5</div>
+      <div class="oc-label">Fortalezas</div>
+    </div>
+    <div class="overview-card yellow">
+      <div class="oc-num">8</div>
+      <div class="oc-label">En desarrollo</div>
+    </div>
+    <div class="overview-card red">
+      <div class="oc-num">1</div>
+      <div class="oc-label">Desafío</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FORTALEZAS -->
+<!-- ============================================================ -->
+<div class="section-header green">
+  <div class="sh-icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.5 7.5L18 8L14 12L15 18L10 15L5 18L6 12L2 8L7.5 7.5L10 2Z" fill="#2E7D5B"/></svg>
+  </div>
+  <div>
+    <h3>¿Cuáles son las fortalezas identificadas?</h3>
+    <div class="sh-sub">Dominios con puntaje ≥ 4.0 — Factores que contribuyen positivamente al acompañamiento de la práctica</div>
+  </div>
+</div>
+
+<!-- D5: Optimismo -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon green">
+      <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="15" r="9" stroke="#2E7D5B" stroke-width="1.8"/><path d="M8 13.5C8 13.5 10 17 13 17C16 17 18 13.5 18 13.5" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="2" x2="13" y2="5" stroke="#D4A843" stroke-width="1.8" stroke-linecap="round"/><line x1="6" y1="6" x2="8" y2="8" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="6" x2="18" y2="8" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="13" x2="5" y2="13" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><line x1="23" y1="13" x2="21" y2="13" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Optimismo</h4>
+      <div class="dc-sub">Dominio 5 · <span class="badge green">Fortaleza</span></div>
+    </div>
+    <div class="dc-score green">
+      <div class="score-num">4.53</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill green" style="width:90.6%"></div></div>
+  <div class="dc-text">Es el dominio más fuerte. Las familias tienen una <strong>convicción sólida de que la práctica diaria traerá beneficios a largo plazo</strong> y que sus hijos disfrutarán cada vez más de la música. Además, no están atrapadas en pensamientos pesimistas. Este optimismo es un motor motivacional, pues cuando los padres creen en el proceso, toleran mejor las dificultades cotidianas.</div>
+</div>
+
+<!-- D3: Rol e identidad -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon green">
+      <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="8" r="4.5" stroke="#2E7D5B" stroke-width="1.8"/><path d="M5 22C5 17.5 8.5 14 13 14C17.5 14 21 17.5 21 22" stroke="#2E7D5B" stroke-width="1.8" stroke-linecap="round"/><path d="M13 17L11.5 20L13 19L14.5 20L13 17Z" fill="#D4A843"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Rol e identidad</h4>
+      <div class="dc-sub">Dominio 3 · <span class="badge green">Fortaleza</span></div>
+    </div>
+    <div class="dc-score green">
+      <div class="score-num">4.30</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill green" style="width:86%"></div></div>
+  <div class="dc-text">Los padres y madres han integrado el acompañamiento musical como parte de quiénes son. <strong>No lo viven como una tarea impuesta, sino como una expresión de sus valores de crianza.</strong> Se sienten parte de una comunidad de familias y perciben su rol como claro y útil. Un sentido de identidad fuerte actúa como un anclaje, porque cuando algo forma parte de la identidad es más difícil abandonarlo.</div>
+</div>
+
+<!-- D6: Creencias consecuencias -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon green">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M13 20C13 20 13 12 13 8" stroke="#2E7D5B" stroke-width="1.8" stroke-linecap="round"/><path d="M13 8C10 8 8 6 8 4" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><path d="M13 8C16 8 18 6 18 4" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12C11 12 9 10.5 8.5 9" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12C15 12 17 10.5 17.5 9" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="13" cy="22" rx="4" ry="1.5" fill="#D4A843" opacity="0.3"/><rect x="11.5" y="20" width="3" height="3" rx="1" fill="#D4A843" opacity="0.5"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Creencias sobre las consecuencias</h4>
+      <div class="dc-sub">Dominio 6 · <span class="badge green">Fortaleza</span></div>
+    </div>
+    <div class="dc-score green">
+      <div class="score-num">4.26</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill green" style="width:85.2%"></div></div>
+  <div class="dc-text">Existe una convicción clara de que <strong>acompañar la práctica contribuye al desarrollo del hijo, tanto musical como personal</strong>. Los padres valoran más el desarrollo integral que los logros técnicos. Esperan resultados concretos pero sin caer en expectativas desmedidas.</div>
+</div>
+
+<!-- D1: Conocimiento -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon green">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M4 6L13 3L22 6V18L13 21L4 18V6Z" stroke="#2E7D5B" stroke-width="1.8" stroke-linejoin="round"/><line x1="13" y1="3" x2="13" y2="21" stroke="#2E7D5B" stroke-width="1.5"/><path d="M4 6L13 9L22 6" stroke="#2E7D5B" stroke-width="1.5" stroke-linejoin="round"/><circle cx="13" cy="13" r="2" fill="#D4A843" opacity="0.6"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Conocimiento</h4>
+      <div class="dc-sub">Dominio 1 · <span class="badge green">Fortaleza</span></div>
+    </div>
+    <div class="dc-score green">
+      <div class="score-num">4.07</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill green" style="width:81.4%"></div></div>
+  <div class="dc-text">Los padres <strong>conocen bien los fundamentos del método y han recibido información clara sobre el porqué de la práctica diaria</strong>. Sin embargo, hay una brecha: saber cómo estructurar una sesión efectiva es notoriamente más débil, lo que sugiere que saben el "por qué" pero les falta el "cómo".</div>
+</div>
+
+<!-- D8: Intenciones -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon green">
+      <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#2E7D5B" stroke-width="1.8"/><path d="M13 5V13L18 16" stroke="#2E7D5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="13" r="2" fill="#D4A843"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Intenciones</h4>
+      <div class="dc-sub">Dominio 8 · <span class="badge green">Fortaleza</span></div>
+    </div>
+    <div class="dc-score green">
+      <div class="score-num">4.04</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill green" style="width:80.8%"></div></div>
+  <div class="dc-text">La intención de acompañar <strong>se ha mantenido estable en el tiempo y los padres se mantienen firmes incluso en días difíciles</strong>. Esto indica compromiso sostenido, no solo entusiasmo inicial.</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- EN DESARROLLO -->
+<!-- ============================================================ -->
+<div class="section-header yellow">
+  <div class="sh-icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#9E7C1A" stroke-width="1.8"/><path d="M10 5V10.5" stroke="#9E7C1A" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="14" r="1" fill="#9E7C1A"/></svg>
+  </div>
+  <div>
+    <h3>¿Cuáles aspectos están en desarrollo?</h3>
+    <div class="sh-sub">Dominios entre 3.0 y 3.9 — Factores que pueden seguir fortaleciéndose</div>
+  </div>
+</div>
+
+<!-- D11: Contexto ambiental -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M4 13L13 5L22 13V22H4V13Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><rect x="10" y="16" width="6" height="6" rx="1" stroke="#9E7C1A" stroke-width="1.5"/><path d="M13 5V2" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Contexto ambiental y recursos</h4>
+      <div class="dc-sub">Dominio 11 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.97</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:79.4%"></div></div>
+  <div class="dc-text">Casi una fortaleza. <strong>Los recursos materiales están bien cubiertos</strong> (instrumentos en buen estado, acceso a materiales) y el entorno social y cultural de las familias valora la música. Lo que dificulta la práctica son los factores del entorno: horarios familiares que interfieren y falta de adaptaciones en el espacio físico.</div>
+</div>
+
+<!-- D7: Refuerzo -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M13 4L15.5 9.5L21.5 10L17 14.5L18.5 21L13 18L7.5 21L9 14.5L4.5 10L10.5 9.5L13 4Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><circle cx="13" cy="13" r="2" fill="#D4A843" opacity="0.5"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Refuerzo</h4>
+      <div class="dc-sub">Dominio 7 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.74</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:74.8%"></div></div>
+  <div class="dc-text">Los padres reconocen logros en el momento y celebran avances. Sin embargo, también recurren a las consecuencias lógicas (como quitar privilegios), y manifiestan frustración cuando los niños no quieren practicar. Los incentivos positivos no están del todo sistematizados. Existe espacio para fortalecer las estrategias de refuerzo positivo.</div>
+</div>
+
+<!-- D13: Emoción -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M13 22C13 22 4 16 4 10C4 6.5 7 4 10 4C11.5 4 12.5 5 13 6C13.5 5 14.5 4 16 4C19 4 22 6.5 22 10C22 16 13 22 13 22Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12L11 14L17 10" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Emoción</h4>
+      <div class="dc-sub">Dominio 13 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.72</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:74.4%"></div></div>
+  <div class="dc-text">Practicar juntos genera mucha alegría y satisfacción, pero convive con <strong>estrés y miedo a no hacerlo bien</strong>. Los padres disfrutan la práctica pero también la viven con tensión. La experiencia emocional es ambivalente: gratificante cuando funciona, pero generadora de ansiedad cuando no.</div>
+</div>
+
+<!-- D10: Memoria/atención -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M13 4C8 4 4 8 4 12C4 16 7 19 10 20.5V23H16V20.5C19 19 22 16 22 12C22 8 18 4 13 4Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><line x1="10" y1="23" x2="16" y2="23" stroke="#9E7C1A" stroke-width="1.5" stroke-linecap="round"/><path d="M10 13C10 11.5 11 10 13 10C15 10 16 11.5 16 13" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><circle cx="13" cy="15" r="1" fill="#D4A843"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Memoria, atención y decisión</h4>
+      <div class="dc-sub">Dominio 10 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.67</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:73.4%"></div></div>
+  <div class="dc-text"><strong>La atención durante la práctica es buena</strong>, pero recordar que hay que practicar es un desafío y la sobrecarga mental interfiere. Los padres están presentes cuando practican, pero el problema es llegar a ese momento: el cansancio y las múltiples demandas hacen que la práctica se postergue.</div>
+</div>
+
+<!-- D2: Habilidades -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M5 14C5 14 8 11 10 11C12 11 12 14 14 14C16 14 16 11 18 11C20 11 21 13 21 13" stroke="#9E7C1A" stroke-width="2" stroke-linecap="round"/><circle cx="7" cy="7" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="19" cy="7" r="3" stroke="#9E7C1A" stroke-width="1.5"/><path d="M9 20L13 17L17 20" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="17" x2="13" y2="23" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Habilidades</h4>
+      <div class="dc-sub">Dominio 2 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.63</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:72.6%"></div></div>
+  <div class="dc-text">Los padres acompañan la mayoría de los días y escuchan a sus hijos, pero <strong>sienten que su forma de acompañar aún puede mejorar</strong> y que mantener el enfoque sin conflictos es difícil. Hay autoconciencia de lo que falta, lo cual es positivo, pero las habilidades concretas aún están en desarrollo.</div>
+</div>
+
+<!-- D4: Creencias capacidades -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><path d="M6 18L10 10L14 14L18 6L22 12" stroke="#9E7C1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2.5" fill="#D4A843" opacity="0.4" stroke="#9E7C1A" stroke-width="1.2"/><path d="M4 22H22" stroke="#9E7C1A" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Creencias sobre las capacidades</h4>
+      <div class="dc-sub">Dominio 4 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.53</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:70.6%"></div></div>
+  <div class="dc-text">Los padres y madres muestran una <strong>alta confianza en el método y en el proceso de aprendizaje, pero una confianza comparativamente menor en sus propias capacidades</strong> para acompañarlo. Por ejemplo, varios sienten que no siempre saben cómo motivar sin presionar, cómo corregir sin que su hijo o hija se sienta mal, o cómo sostener una práctica cotidiana de manera consistente. En síntesis, confían en el camino, pero también reconocen habilidades de acompañamiento que aún pueden seguir fortaleciendo para recorrerlo con mayor seguridad.</div>
+</div>
+
+<!-- D12: Influencias sociales -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><circle cx="8" cy="8" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="18" cy="8" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="16" r="3" stroke="#9E7C1A" stroke-width="1.5"/><line x1="10" y1="10" x2="12" y2="14" stroke="#D4A843" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="10" x2="14" y2="14" stroke="#D4A843" stroke-width="1.2" stroke-linecap="round"/><line x1="10.5" y1="8.5" x2="15.5" y2="8.5" stroke="#D4A843" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Influencias sociales</h4>
+      <div class="dc-sub">Dominio 12 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.25</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:65%"></div></div>
+  <div class="dc-text">En el entorno de las familias se valora la presencia de los padres, pero <strong>el apoyo social concreto es escaso</strong>: quisieran más acompañamiento y no reciben suficientes ideas de otras familias. Tampoco tienden a compararse con otros padres y madres, lo que puede interpretarse positivamente, en cuanto evita dinámicas de presión poco saludables, pero también sugiere la ausencia de referentes sociales cercanos que puedan inspirar, orientar o reforzar el acompañamiento.</div>
+</div>
+
+<!-- D9: Metas -->
+<div class="domain-card">
+  <div class="dc-top">
+    <div class="dc-icon yellow">
+      <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="13" r="6.5" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="13" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="13" r="1.2" fill="#D4A843"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Metas</h4>
+      <div class="dc-sub">Dominio 9 · <span class="badge yellow">En desarrollo</span></div>
+    </div>
+    <div class="dc-score yellow">
+      <div class="score-num">3.24</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:64.8%"></div></div>
+  <div class="dc-text">Los padres priorizan la práctica, pero <strong>el establecimiento concreto de metas es débil</strong>: no suelen fijar objetivos específicos por sesión ni planificar el momento del día. Tampoco tienen claro qué harán en vacaciones o qué estrategia usar cuando el hijo no quiere practicar. <strong>Hay voluntad, pero falta estructura.</strong></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DESAFÍOS -->
+<!-- ============================================================ -->
+<div class="section-header red">
+  <div class="sh-icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L18 17H2L10 3Z" stroke="#A13232" stroke-width="1.8" stroke-linejoin="round"/><line x1="10" y1="8" x2="10" y2="12" stroke="#A13232" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="14.5" r="1" fill="#A13232"/></svg>
+  </div>
+  <div>
+    <h3>¿Cuál es el principal desafío?</h3>
+    <div class="sh-sub">Dominio con puntaje &lt; 3.0 — Factor que requiere mayor atención y apoyo</div>
+  </div>
+</div>
+
+<!-- D14: Regulación comportamiento -->
+<div class="domain-card" style="border-left: 4px solid var(--red-badge);">
+  <div class="dc-top">
+    <div class="dc-icon red">
+      <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#A13232" stroke-width="1.8"/><path d="M8 13H18" stroke="#A13232" stroke-width="2" stroke-linecap="round"/><path d="M13 8V18" stroke="#A13232" stroke-width="2" stroke-linecap="round"/><path d="M9 9L17 17" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><circle cx="15" cy="10" r="2" fill="#D4A843" opacity="0.3"/></svg>
+    </div>
+    <div class="dc-info">
+      <h4>Regulación del comportamiento</h4>
+      <div class="dc-sub">Dominio 14 · <span class="badge red">Desafío</span></div>
+    </div>
+    <div class="dc-score red">
+      <div class="score-num">2.69</div>
+      <div class="score-max">de 5.0</div>
+    </div>
+  </div>
+  <div class="dc-bar"><div class="dc-bar-fill red" style="width:53.8%"></div></div>
+  <div class="dc-text">Es el dominio más bajo y el único bajo 3.0. El problema central es la <strong>ruptura del hábito: cuando dejan de practicar por unos días, les cuesta mucho retomar</strong>. Las interrupciones (vacaciones, enfermedades, cansancio) destruyen la constancia. Además, no tienen una rutina definida y tienden a improvisar. <strong>Sin estructura, hábitos y constancia, la motivación y las buenas intenciones difícilmente se traducen en una práctica sostenida.</strong></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3C10 3 13 6 13 10C13 14 10 17 10 17" stroke="#5B3D8F" stroke-width="1.5" stroke-linecap="round"/><path d="M7 5C7 5 9.5 7.5 9.5 10C9.5 12.5 7 15 7 15" stroke="#5B3D8F" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><circle cx="10" cy="10" r="2" fill="#D4A843" opacity="0.6"/></svg>
+    Brown Music<span style="font-family: 'Source Sans 3', sans-serif; font-weight: 300; font-size: 13px; color: var(--text-light); vertical-align: baseline;">, estudio de violín centrado en la familia</span>
+  </div>
+  <p>Desarrollado por Álvaro M. Carreño.</p>
+  <p>Encuesta basada en el Theoretical Domains Framework.<br>
+  Atkins, L., Francis, J., Islam, R., O'Connor, D., Patey, A., Ivers, N., ... &amp; Michie, S. (2017). A guide to using the Theoretical Domains Framework of behaviour change to investigate implementation problems. <em>Implementation Science, 12</em>(1), 77.</p>
+</div>
+
+</div>
+</body>
+</html>
