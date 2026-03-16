@@ -273,6 +273,14 @@ body {
   margin-bottom: 2px;
 }
 
+.dc-info .dc-def {
+  font-size: 13px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
 .dc-info .dc-sub {
   font-size: 12px;
   color: var(--text-light);
@@ -340,6 +348,9 @@ body {
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
 }
 
 .badge.green { background: var(--green-bg); color: var(--green-badge); }
@@ -431,7 +442,7 @@ body {
 
 <!-- INTRO -->
 <div class="intro">
-  <h2>Lo que medimos y por qué importa</h2>
+  <h2>¿Qué medía esta encuesta?</h2>
   <p>Se exploraron 14 aspectos de la experiencia de las madres y padres que acompañan la práctica musical de sus hijos e hijas. Cada dominio se midió en una escala de 1 a 5. Los resultados se presentan organizados en tres grupos: las fortalezas del grupo, los aspectos en desarrollo y los desafíos donde se necesita mayor apoyo.</p>
 </div>
 
@@ -477,8 +488,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="15" r="9" stroke="#2E7D5B" stroke-width="1.8"/><path d="M8 13.5C8 13.5 10 17 13 17C16 17 18 13.5 18 13.5" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="2" x2="13" y2="5" stroke="#D4A843" stroke-width="1.8" stroke-linecap="round"/><line x1="6" y1="6" x2="8" y2="8" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="6" x2="18" y2="8" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="13" x2="5" y2="13" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><line x1="23" y1="13" x2="21" y2="13" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Optimismo</h4>
-      <div class="dc-sub">Dominio 5 · <span class="badge green">Fortaleza</span></div>
+      <h4>Optimismo <span class="badge green">Fortaleza</span></h4>
+      <div class="dc-def">La confianza en que las cosas saldrán bien y en que se lograrán los objetivos deseados.</div>
     </div>
     <div class="dc-score green">
       <div class="score-num">4.53</div>
@@ -496,8 +507,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="8" r="4.5" stroke="#2E7D5B" stroke-width="1.8"/><path d="M5 22C5 17.5 8.5 14 13 14C17.5 14 21 17.5 21 22" stroke="#2E7D5B" stroke-width="1.8" stroke-linecap="round"/><path d="M13 17L11.5 20L13 19L14.5 20L13 17Z" fill="#D4A843"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Rol e identidad</h4>
-      <div class="dc-sub">Dominio 3 · <span class="badge green">Fortaleza</span></div>
+      <h4>Rol e identidad <span class="badge green">Fortaleza</span></h4>
+      <div class="dc-def">El conjunto de comportamientos y cualidades personales que una persona muestra en su entorno social o familiar.</div>
     </div>
     <div class="dc-score green">
       <div class="score-num">4.30</div>
@@ -515,8 +526,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M13 20C13 20 13 12 13 8" stroke="#2E7D5B" stroke-width="1.8" stroke-linecap="round"/><path d="M13 8C10 8 8 6 8 4" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><path d="M13 8C16 8 18 6 18 4" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12C11 12 9 10.5 8.5 9" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><path d="M13 12C15 12 17 10.5 17.5 9" stroke="#2E7D5B" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="13" cy="22" rx="4" ry="1.5" fill="#D4A843" opacity="0.3"/><rect x="11.5" y="20" width="3" height="3" rx="1" fill="#D4A843" opacity="0.5"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Creencias sobre las consecuencias</h4>
-      <div class="dc-sub">Dominio 6 · <span class="badge green">Fortaleza</span></div>
+      <h4>Creencias sobre las consecuencias <span class="badge green">Fortaleza</span></h4>
+      <div class="dc-def">Lo que se cree acerca de los resultados o efectos de una conducta en una situación determinada.</div>
     </div>
     <div class="dc-score green">
       <div class="score-num">4.26</div>
@@ -534,8 +545,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M4 6L13 3L22 6V18L13 21L4 18V6Z" stroke="#2E7D5B" stroke-width="1.8" stroke-linejoin="round"/><line x1="13" y1="3" x2="13" y2="21" stroke="#2E7D5B" stroke-width="1.5"/><path d="M4 6L13 9L22 6" stroke="#2E7D5B" stroke-width="1.5" stroke-linejoin="round"/><circle cx="13" cy="13" r="2" fill="#D4A843" opacity="0.6"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Conocimiento</h4>
-      <div class="dc-sub">Dominio 1 · <span class="badge green">Fortaleza</span></div>
+      <h4>Conocimiento <span class="badge green">Fortaleza</span></h4>
+      <div class="dc-def">La conciencia de que algo existe y la comprensión de información relevante sobre un tema.</div>
     </div>
     <div class="dc-score green">
       <div class="score-num">4.07</div>
@@ -553,8 +564,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#2E7D5B" stroke-width="1.8"/><path d="M13 5V13L18 16" stroke="#2E7D5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="13" r="2" fill="#D4A843"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Intenciones</h4>
-      <div class="dc-sub">Dominio 8 · <span class="badge green">Fortaleza</span></div>
+      <h4>Intenciones <span class="badge green">Fortaleza</span></h4>
+      <div class="dc-def">La decisión consciente de realizar un comportamiento o la resolución de actuar de cierta manera.</div>
     </div>
     <div class="dc-score green">
       <div class="score-num">4.04</div>
@@ -585,8 +596,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M4 13L13 5L22 13V22H4V13Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><rect x="10" y="16" width="6" height="6" rx="1" stroke="#9E7C1A" stroke-width="1.5"/><path d="M13 5V2" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Contexto ambiental y recursos</h4>
-      <div class="dc-sub">Dominio 11 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Contexto ambiental y recursos <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">Las circunstancias del entorno que dificultan o facilitan el desarrollo de habilidades y comportamientos.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.97</div>
@@ -594,7 +605,7 @@ body {
     </div>
   </div>
   <div class="dc-bar"><div class="dc-bar-fill yellow" style="width:79.4%"></div></div>
-  <div class="dc-text">Casi una fortaleza. <strong>Los recursos materiales están bien cubiertos</strong> (instrumentos en buen estado, acceso a materiales) y el entorno social y cultural de las familias valora la música. Lo que dificulta la práctica son los factores del entorno: horarios familiares que interfieren y falta de adaptaciones en el espacio físico.</div>
+  <div class="dc-text"><strong>Los recursos materiales están bien cubiertos</strong> (instrumentos en buen estado, acceso a materiales) y el entorno social y cultural de las familias valora la música. Lo que dificulta la práctica son los factores del entorno: horarios familiares que interfieren y falta de adaptaciones en el espacio físico.</div>
 </div>
 
 <!-- D7: Refuerzo -->
@@ -604,8 +615,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M13 4L15.5 9.5L21.5 10L17 14.5L18.5 21L13 18L7.5 21L9 14.5L4.5 10L10.5 9.5L13 4Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><circle cx="13" cy="13" r="2" fill="#D4A843" opacity="0.5"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Refuerzo</h4>
-      <div class="dc-sub">Dominio 7 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Refuerzo <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">Los estímulos que aumentan o disminuyen la probabilidad de que un comportamiento se repita.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.74</div>
@@ -623,8 +634,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M13 22C13 22 4 16 4 10C4 6.5 7 4 10 4C11.5 4 12.5 5 13 6C13.5 5 14.5 4 16 4C19 4 22 6.5 22 10C22 16 13 22 13 22Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12L11 14L17 10" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Emoción</h4>
-      <div class="dc-sub">Dominio 13 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Emoción <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">El patrón complejo de reacciones con que una persona enfrenta un asunto personalmente significativo.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.72</div>
@@ -642,8 +653,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M13 4C8 4 4 8 4 12C4 16 7 19 10 20.5V23H16V20.5C19 19 22 16 22 12C22 8 18 4 13 4Z" stroke="#9E7C1A" stroke-width="1.8" stroke-linejoin="round"/><line x1="10" y1="23" x2="16" y2="23" stroke="#9E7C1A" stroke-width="1.5" stroke-linecap="round"/><path d="M10 13C10 11.5 11 10 13 10C15 10 16 11.5 16 13" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/><circle cx="13" cy="15" r="1" fill="#D4A843"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Memoria, atención y decisión</h4>
-      <div class="dc-sub">Dominio 10 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Memoria, atención y decisión <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">La capacidad de retener información, enfocarse selectivamente y elegir entre alternativas.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.67</div>
@@ -661,8 +672,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M5 14C5 14 8 11 10 11C12 11 12 14 14 14C16 14 16 11 18 11C20 11 21 13 21 13" stroke="#9E7C1A" stroke-width="2" stroke-linecap="round"/><circle cx="7" cy="7" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="19" cy="7" r="3" stroke="#9E7C1A" stroke-width="1.5"/><path d="M9 20L13 17L17 20" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="17" x2="13" y2="23" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Habilidades</h4>
-      <div class="dc-sub">Dominio 2 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Habilidades <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">Una competencia adquirida a través de la práctica.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.63</div>
@@ -680,8 +691,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><path d="M6 18L10 10L14 14L18 6L22 12" stroke="#9E7C1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2.5" fill="#D4A843" opacity="0.4" stroke="#9E7C1A" stroke-width="1.2"/><path d="M4 22H22" stroke="#9E7C1A" stroke-width="1.5" stroke-linecap="round"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Creencias sobre las capacidades</h4>
-      <div class="dc-sub">Dominio 4 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Creencias sobre las capacidades <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">Lo que se cree acerca de la propia habilidad o facilidad para realizar algo de manera constructiva.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.53</div>
@@ -699,8 +710,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><circle cx="8" cy="8" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="18" cy="8" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="16" r="3" stroke="#9E7C1A" stroke-width="1.5"/><line x1="10" y1="10" x2="12" y2="14" stroke="#D4A843" stroke-width="1.2" stroke-linecap="round"/><line x1="16" y1="10" x2="14" y2="14" stroke="#D4A843" stroke-width="1.2" stroke-linecap="round"/><line x1="10.5" y1="8.5" x2="15.5" y2="8.5" stroke="#D4A843" stroke-width="1.2" stroke-linecap="round"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Influencias sociales</h4>
-      <div class="dc-sub">Dominio 12 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Influencias sociales <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">Los procesos interpersonales que pueden llevar a las personas a cambiar sus pensamientos, sentimientos o comportamientos.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.25</div>
@@ -718,8 +729,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="13" r="6.5" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="13" r="3" stroke="#9E7C1A" stroke-width="1.5"/><circle cx="13" cy="13" r="1.2" fill="#D4A843"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Metas</h4>
-      <div class="dc-sub">Dominio 9 · <span class="badge yellow">En desarrollo</span></div>
+      <h4>Metas <span class="badge yellow">En desarrollo</span></h4>
+      <div class="dc-def">Las representaciones mentales de los resultados o estados que se desea alcanzar.</div>
     </div>
     <div class="dc-score yellow">
       <div class="score-num">3.24</div>
@@ -750,8 +761,8 @@ body {
       <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#A13232" stroke-width="1.8"/><path d="M8 13H18" stroke="#A13232" stroke-width="2" stroke-linecap="round"/><path d="M13 8V18" stroke="#A13232" stroke-width="2" stroke-linecap="round"/><path d="M9 9L17 17" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><circle cx="15" cy="10" r="2" fill="#D4A843" opacity="0.3"/></svg>
     </div>
     <div class="dc-info">
-      <h4>Regulación del comportamiento</h4>
-      <div class="dc-sub">Dominio 14 · <span class="badge red">Desafío</span></div>
+      <h4>Regulación del comportamiento <span class="badge red">Desafío</span></h4>
+      <div class="dc-def">Todo aquello destinado a gestionar o cambiar las propias acciones de manera observable.</div>
     </div>
     <div class="dc-score red">
       <div class="score-num">2.69</div>
